@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Card Game -- Play</title>
+    <script type="text/javascript" src="{{ static_url("jquery.js") }}"></script>
+    <script type="text/javascript" src="{{ static_url("play.js") }}"></script>
+    <script type="text/javascript">var game_id = "{{ game_id }}";</script>
+  </head>
+  <body>
+    <h1>Card Game -- Play</h1>
+    <div id="playdiv">
+      <iframe src="/static/openingsocket.html"></iframe>
+    </div>
+  </body>
+</html>

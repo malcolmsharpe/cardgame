@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Card Game -- Game Index</title>
+  </head>
+  <body>
+    <h1>Card Game -- Game Index</h1>
+    <form action="/creategame" method="post">
+      <input type="submit" value="Create Game"/>
+    </form>
+    <table>
+      <tr><th>Creator</th><th>Join</th></tr>
+      {% for game in games %}
+        <tr>
+          <td>{{ game.creator }}</td>
+          <td>
+            <form action="/joingame" method="post">
+              <input type="hidden" id="gameid" name="gameid"
+                     value="{{ game.game_id }}"/>
+              <input type="submit" value="Join Game"/>
+            </form>
+          </td>
+        </tr>
+      {% end %}
+    </table>
+  </body>
+</html>

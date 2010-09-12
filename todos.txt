@@ -1,0 +1,13 @@
+- Each phase of the game must have a view for the active player AND a view for
+  each of the passive players. It isn't sufficient to have just one passive view
+  for all phases, which is how it is structured at the moment.
+- You shouldn't be able to join your own game.
+- Maybe get rid of the iframes since they are not needed.
+- Error in opening socket should send an error to the client. (e.g. Invalid
+  game ID.) Also same goes for on_message.
+- Should send out a message even before the game starts.
+- Use console.log to print messages.
+- Put navigation on pages. In particular, it should be possible to return to the
+  index from any page.
+- Socket closed message should be inline, because one reason the socket could
+  be closed is that the server is shut down => can't load the message page.
